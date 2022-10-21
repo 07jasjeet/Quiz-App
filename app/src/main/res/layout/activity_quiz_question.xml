@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".QuizQuestionActivity">
+    <!-- android:fillViewport = Defines whether the scrollview
+         should stretch its content to fill the viewport. -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            tools:text="What country does this flag belong to?"
+            android:textSize="21sp"
+            />
+        <!--tools:text = The text entered in this field will only be visible in the designer view
+                         and not when the application is run. -->
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/quiz_image"
+            tools:src="@drawable/ic_flag_of_india"
+            />
+        <!-- android:contentDescription = For people who can't see, i.e., use the accessibility
+                                          function of android, we implement this so as to make the
+                                          app more versatile and accessible to everyone.
+                                          -->
+        <!-- tools:src="@drawable/img" = Only visible in designer view and is used as a reference.
+                                         -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_marginStart="40dp"
+                android:layout_weight="9"
+                android:max="10"
+                android:indeterminate="false"
+                android:minHeight="50dp"
+                android:progress="1"
+                />
+            <!-- android:indeterminate = Allows to enable the indeterminate mode. In this mode the
+                                         progress bar plays an infinite looping animation.-->
+            <TextView
+                android:id="@+id/tvProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                tools:text="1/10"
+                android:textColor="#939393"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvOptionOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/default_option_border_bg"
+            android:padding="15dp"
+            android:textStyle="normal"
+            tools:text="Option 1"
+            />
+
+        <TextView
+            android:id="@+id/tvOptionTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/default_option_border_bg"
+            android:padding="15dp"
+            tools:text="Option 2"
+            />
+
+        <TextView
+            android:id="@+id/tvOptionThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/default_option_border_bg"
+            android:padding="15dp"
+            tools:text="Option 3"
+            />
+
+        <TextView
+            android:id="@+id/tvOptionFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/default_option_border_bg"
+            android:padding="15dp"
+            tools:text="Option 4"
+            />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="10dp"
+            android:padding="13dp"
+            android:text="@string/submit"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
